@@ -3,8 +3,7 @@
     <div class="navbar-brand">
       <div class="navbar-item mono">
         <img :src="logo" title="Pokémon" alt="Pokémon" class="logo">
-        <span v-if="isMobile">Memory Game</span>
-        <span v-else>Pokémon - Memory Game</span>
+        <span>{{ gameName }}</span>
       </div>
       <div class="navbar-item">
         <Timer class="is-pulled-right" v-if="isMobile" />
@@ -22,12 +21,9 @@
 
 <script>
 import { sample } from 'lodash-es'
-import { pokeApiSprite } from '../../support/utils'
 import { mapState } from 'vuex'
 import Timer from '../Timer.vue'
 import Visibility from 'visibilityjs'
-
-// const getPokemon = () => sample(ids)
 
 export default {
   name: 'ShellHeader',
@@ -41,7 +37,10 @@ export default {
   computed: {
     ...mapState(['isMobile']),
     logo () {
-      return pokeApiSprite(this.pokemon)
+      return 'img/abstract.png'
+    },
+    gameName () {
+      return process.env.VUE_APP_NAME
     }
   },
   watch: {
