@@ -1,4 +1,5 @@
 import { Snackbar } from 'buefy/dist/components/snackbar'
+import { Dialog } from 'buefy/dist/components/dialog'
 import { Toast } from 'buefy/dist/components/toast'
 import { size, head, toUpper } from 'lodash-es'
 import * as mutations from './mutations.type'
@@ -6,9 +7,10 @@ import * as mutations from './mutations.type'
 const cathAlert = identifier => {
   Snackbar.open({
     position: 'is-top',
-    message: `You find ${toUpper(identifier)}!`,
+    message: `Micróbio da ${toUpper(identifier)} encontrado!`,
     queue: false,
-    duration: 1000
+    actionText: null,
+    duration: 3000
   })
 }
 
@@ -19,9 +21,25 @@ const cardsActionsPlugin = store => {
     }, 400)
   }
 
-  const addFound = ({ id, identifier }) => {
+  const addFound = ({ id, identifier, description, transmission, symptoms }) => {
     cathAlert(identifier)
     store.dispatch('addFound', id)
+    Dialog.confirm({
+      title: identifier.toUpperCase(),
+      message: `
+       <div class="info-micro">
+        <center><img width="100px"  src="img/biologia/${id}.png"></center>
+        <p>${description}</p>
+        <h3>Transmissão:</h3>
+        <p>${transmission}</p>
+        <h3>Sintomas:</h3>
+        <p>${symptoms}</p>
+       </div>
+      `,
+      confirmText: 'Entendi !',
+      canCancel: false,
+      type: 'is-success'
+    })
   }
 
   store.watch(
@@ -65,10 +83,10 @@ const cardsActionsPlugin = store => {
       val
         ? Toast.open({
           type: 'is-warning',
-          message: 'Easy Mode is On. Your score will be lower than normal.'
+          message: 'O modo fácil está ativado. Sua pontuação será menor que o normal.'
         })
         : Toast.open({
-          message: 'Easy Mode is Off, Your score returns to normal.'
+          message: 'O Modo Fácil está Desativado, sua pontuação volta ao normal.'
         })
     }
   )

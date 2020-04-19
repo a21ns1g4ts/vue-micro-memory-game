@@ -11,6 +11,7 @@
 <script>
 import CardImage from './CardImage.vue'
 import { includes, upperCase } from 'lodash-es'
+import { mapState } from 'vuex'
 
 export default {
   name: 'PokeCard',
@@ -22,6 +23,7 @@ export default {
     forceDisplay: Boolean
   },
   computed: {
+    ...mapState(['timer']),
     visible () {
       return this.forceDisplay || this.isSelected || this.isFound
     },
@@ -49,7 +51,7 @@ export default {
   },
   methods: {
     onClick (e) {
-      this.$emit('select', this.pokemon)
+      if (this.timer > 0) { this.$emit('select', this.pokemon) }
     }
   }
 }

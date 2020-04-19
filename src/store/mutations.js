@@ -36,6 +36,11 @@ export default {
   [types.addScore]: (state, value) => {
     state.score = state.score + toSafeInteger(value)
   },
+
+  [types.setReadingInformations]: (state, value) => {
+    state.readingInformations = value
+  },
+
   [types.addFailure]: state => {
     state.failures = state.failures + 1
   },

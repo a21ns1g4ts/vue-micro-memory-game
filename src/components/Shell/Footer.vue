@@ -4,8 +4,12 @@
       <p>
         Made with
         <b-icon color="red" type="is-success" size="is-small" icon="vuejs" />
-        by
+        engine by
         <a href="https://github.com/vinicius73" target="_blank">@vinicius73</a>
+      </p>
+      <p>
+        Micro adaptations by
+        <a href="https://github.com/Atiladanvi" target="_blank">@Atiladanvi</a>
       </p>
       <p>
         <a href="https://github.com/vinicius73/vue-pokemon-memory-game" target="_blank">

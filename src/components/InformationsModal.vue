@@ -2,44 +2,44 @@
   <div class="modal-card" ref="root">
     <header class="modal-card-head">
       <p class="modal-card-title">
-        Informations
+        Informações
       </p>
     </header>
     <section class="modal-card-body">
-      <h2 class="title">Game Modes</h2>
-      <p>Mods that change the game experience and the final score.</p>
+      <h2 class="title">Modos de Jogo</h2>
+      <p>Mods que mudam a experiência do jogo e a pontuação final.</p>
 
       <hr>
 
       <div class="columns is-mobile">
         <div class="column">
           <h3 class="subtitle">
-            <b-icon icon="baby-buggy" /> Easy Mode
+            <b-icon icon="baby-buggy" /> Modo fácil
           </h3>
-          <p>Begin practice with all revealed cards.</p>
-          <p>The time varies with the selected level.</p>
-          <p>Playing at this level makes you lose 50% of base score, in roulette mode this value is 75%</p>
+          <p>Comece a praticar com todas as cartas reveladas.</p>
+          <p>O tempo varia com o nível selecionado.</p>
+          <p>Jogar nesse nível faz com que você perca 50% da pontuação básica; no modo roleta, esse valor é 75%</p>
         </div>
         <div class="column">
           <h3 class="subtitle">
-            <b-icon icon="shuffle-variant" /> Roulette Mode
+            <b-icon icon="shuffle-variant" /> Modo Roleta
           </h3>
-          <p>This mode provides an extra difficulty and with this a much larger base score.</p>
-          <p>After a number of caught pokemon, there is a new shuffle.</p>
+          <p>Este modo fornece uma dificuldade extra e, com isso, uma pontuação base muito maior.</p>
+          <p>Depois de vários acertos, tudo é embaralhado novamente.</p>
 
         </div>
       </div>
 
       <hr>
-      <h2 class="title">Scores</h2>
-      <p>Each Pokémon you catch adds points to your final score. These points vary depending on the level and mode of play.</p>
-      <p>At each failure this base score loses 10% of its value, accumulating up to 90% loss.</p>
+      <h2 class="title">Pontuação</h2>
+      <p>Cada micróbio que você combina adiciona pontos à sua pontuação final. Esses pontos variam de acordo com o nível e o modo de jogo.</p>
+      <p>Cada Pokémon que você pega adiciona pontos à sua pontuação final. Esses pontos variam de acordo com o nível e o modo de jogo.</p>
       <table class="table is-bordered is-fullwidth">
         <thead>
           <tr>
-            <th>Level</th>
-            <th>Base Score / Easy</th>
-            <th>Roulette Mode / Easy</th>
+            <th>Nível</th>
+            <th>Normal / Fácil</th>
+            <th>Modo Roleta / Fácil</th>
           </tr>
         </thead>
         <tbody>

@@ -1,0 +1,101 @@
+[
+  {
+    "id":1,
+    "identifier":"aids",
+    "description": "Infecção Sexualmente Transmissível causada pelo Vírus da Imunodeficiência Humana.",
+    "transmission": "Transmitida pelo contato sexual, pelo sangue e de mãe para filho.",
+    "symptoms": "Febre, calafrios, manchas na pele, ínguas, dor de cabeça, garganta e corpo. Como afeta o sistema imunológico, outras doenças podem surgir num estágio mais avançado."
+  },
+  {
+    "id":2,
+    "identifier":"catapora",
+    "description": "Doença infecciosa e altamente contagiosa causada pelo vírus Varicela-Zoster.",
+    "transmission": "Através do contato com as secreções dos portadores da doença.",
+    "symptoms": "Lesões cutâneas (na pele) que se apresentam nas diversas formas evolutivas (máculas, pápulas, vesículas, pústulas e crostas), acompanhadas de prurido (coceira)."
+  },
+  {
+    "id":3,
+    "identifier":"clamídia",
+    "description": "É uma infecção sexualmente transmissível (IST) causada pela bactéria Chlamydia trachomatis.",
+    "transmission": "Através de relações sexuais; de mãe para filho no parto.",
+    "symptoms": "Ardor ao urinar; vontade frequente de urinar; em homens testículos doloridos e inchados; no caso das mulheres dor no baixo ventre."
+  },
+  {
+    "id":4,
+    "identifier":"covid-19",
+    "description": "Família de vírus que causam infecções respiratórias como doença chamada de COVID-19.",
+    "transmission": "Costuma ocorrer pelo ar (gotículas respiratórias) ou por contato pessoal através de espirro, tosse, saliva e outras secreções.",
+    "symptoms": "Os sinais e sintomas são principalmente respiratórios, semelhantes a um resfriado, acompanhado de tosse, febre alta e dificuldade de respirar."
+  },
+  {
+    "id":5,
+    "identifier":"dengue",
+    "description": "Doença febril grave causada por um arbovírus.",
+    "transmission": "Através da picada do mosquito Aedes aegypti, que é o principal vetor.",
+    "symptoms": "Febre alta, fadiga, perda de apetite, náuseas, vômitos, manchas e coceira na pele."
+  },
+  {
+    "id":6,
+    "identifier":"gonorreia",
+    "description": "É uma infecção sexualmente transmissível (IST), causada pela bactéria Neisseria gonorrhoeae.",
+    "transmission": "Relações sexuais; de mãe para filho no parto.",
+    "symptoms": "Dor e ardor ao urinar; sangramentos; corrimento amarelado e com forte odor."
+  },
+  {
+    "id":7,
+    "identifier":"h1n1",
+    "description": "A gripe H1N1 é uma doença causada pela mutação do vírus da gripe (Influenza) e é popularmente conhecida como gripe suína. ",
+    "transmission": "A transmissão do vírus ocorre de uma pessoa para outra, por partículas que saem da boca através de espirro, tosse ou fala. Além disso, é possível pegar a gripe por contato com superfícies contaminadas com gotículas respiratórias (o que pode incluir qualquer objeto).",
+    "symptoms": "Os sintomas da gripe H1N1 são muito parecidos com os da gripe comum, porém apresentando mais alterações gastrointestinais. Os sinais mais comuns são: Febre, Tosse, Dor de garganta, Mal estar, Cefaleia, Vômito, Diarreia."
+  },
+  {
+    "id":8,
+    "identifier":"hepatite-a",
+    "description": "Inflamação do fígado",
+    "transmission": "Transmissão é fecal-oral, por contato entre indivíduos ou por meio de água ou alimentos contaminados pelo vírus;",
+    "symptoms": "Mal-estar, febre, pele e olhos amarelados, náuseas, vômitos, dores abdominais, falta de apetite, urina escura e fezes esbranquiçadas."
+  },
+  {
+    "id":9,
+    "identifier":"hpv-papiloma-vírus",
+    "description": "PAPILOMA VÍRUS - É uma Infecção Sexualmente Transmissível (IST). É um vírus que infecta pele ou mucosas.",
+    "transmission": "Pelo contato sexual.",
+    "symptoms": "Surgimento de verrugas, lesões e manchas na pele, sobretudo na área genital. As lesões são percursoras de câncer, como o câncer de colo de útero."
+  },
+  {
+    "id":10,
+    "identifier":"leptospirose",
+    "description": "É uma doença bacteriana que afeta seres humanos e animais. É causada pela bactéria do gênero Leptospira sp.",
+    "transmission": "Contato com água ou objetos que tenham urina de animais infectados.",
+    "symptoms": "Febre alta, dor muscular, mal-estar, tosse, olhos vermelhos e manchas vermelhas pelo corpo."
+
+  },
+  {
+    "id":11,
+    "identifier":"pneumonia",
+    "description": "É uma infecção pulmonar causada por bactérias, vírus e fungos, ou processos alérgicos. Um dos principais agentes é a bactéria Streptococcus pneumoniae.",
+    "transmission": "Através de espirro, saliva e tosse de pessoas infectadas.",
+    "symptoms": "Dor no corpo, falta de ar persistente, febre alta, tosse, fraqueza e cansaço."
+  },
+  {
+    "id":12,
+    "identifier":"sarampo",
+    "description": "Doença altamente contagiosa causada pelo vírus (Measles morbillivirus).",
+    "transmission": "Contato com as secreções do portador da doença, e ainda, pelo compartilhamento de objetos.",
+    "symptoms": "Febre, tosse, manchas avermelhadas no corpo e formação de pequenos pontos brancos no interior da boca denominados sinais de Koplik."
+  },
+  {
+    "id":13,
+    "identifier":"sifilis",
+    "description": "É uma Infecção Sexualmente Transmissível (IST) causada pela bactéria Treponema pallidum.",
+    "transmission": "A sífilis pode ser transmitida por relação sexual sem camisinha com uma pessoa infectada ou para a criança durante a gestação ou parto.",
+    "symptoms": "A doença ocorre em três fases (primária, secundária e terciária). A fase primária é caracteriza pelo aparecimento de uma lesão/ferida, geralmente única, no local de entrada da bactéria (órgãos genitais boca, ou outros locais da pele), é indolor, não coça, não arde e não tem pus, chamada de cancro duro."
+  },
+  {
+    "id":14,
+    "identifier":"tuberculose",
+    "description": "É uma doença infectocontagiosa causada pela bactéria Mycobacterium tuberculosis, também chamada de Bacilo de Koch (BK).",
+    "transmission": "É uma doença de transmissão aérea e ocorre a partir da inalação de bioaerossóis procedentes da fala, espirro ou tosse das pessoas infectadas",
+    "symptoms": "Fadiga, febre, tosse, emagrecimento, falta de apetite, sudorese, rouquidão e expectoração com sangue, nos casos mais graves."
+  }
+]

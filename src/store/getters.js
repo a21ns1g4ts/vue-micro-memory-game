@@ -10,7 +10,7 @@ export default {
   // number of pokemon found
   foundCount: ({ found }) => size(found),
   levels: ({ isMobile }) => {
-    return makeLevels(6, isMobile ? 4 : 10)
+    return makeLevels(7, isMobile ? 2 : 2)
   },
   timerStatus: ({ isRunning }, { isDone }) => {
     return isRunning && !isDone

@@ -8,13 +8,13 @@
         <div class="field">
           <div class="buttons has-addons">
             <button @click="toggleEasyMode"
-              title="easy mode"
+              title="modo fácil"
               class="button"
               :class="{ 'is-link': isEasyMode }">
               <b-icon icon="baby-buggy" />
             </button>
             <button @click="toggleRouletteMode"
-              title="roulette mode"
+              title="modo roleta"
               class="button"
               :class="{ 'is-link': isRouletteMode }">
               <b-icon icon="shuffle-variant" />
@@ -22,7 +22,7 @@
           </div>
           <button @click="showInformations"
             v-if="!isMobile"
-            title="informations"
+            title="informações"
             class="button is-link is-inverted" >
             <b-icon type="is-warning" icon="information" />
           </button>
@@ -63,7 +63,7 @@ import { mapGetters, mapActions, mapState } from 'vuex'
 const getThemAll = () => {
   Toast.open({
     type: 'is-info',
-    message: 'Get them all!'
+    message: 'Vamos brincar de aprender!'
   })
 }
 

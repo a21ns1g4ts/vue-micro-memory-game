@@ -7,6 +7,7 @@ export const setIsEasyMode = 'set/isEasyMode'
 export const setIsRunning = 'set/isRunning'
 export const setIsLoading = 'set/isLoading'
 export const setPokemonRawList = 'set/pokemonRawList'
+export const setReadingInformations = 'set/readingInformations'
 
 export const addFound = 'add/found'
 export const addSelected = 'add/selected'

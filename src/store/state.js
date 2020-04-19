@@ -1,7 +1,7 @@
 import { isMobile } from '../support/utils'
 
 export default {
-  level: 6,
+  level: 7,
   score: 0,
   timer: 0,
   failures: 0,
@@ -14,5 +14,6 @@ export default {
   isMobile: isMobile(),
   found: [],
   selecteds: [],
-  pokemonRawList: []
+  pokemonRawList: [],
+  readingInformations: false
 }

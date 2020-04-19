@@ -9,7 +9,7 @@ const loadPokemon = ({ commit }) => {
   commit(mutations.resetFailures)
   commit(mutations.resetScore)
 
-  return fetch('/abstract.json')
+  return fetch('/biologia.json')
     .then(response => response.json())
     .then(data => {
       commit(mutations.setError, '')

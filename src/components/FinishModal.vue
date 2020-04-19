@@ -1,24 +1,23 @@
 <template>
   <div class="modal-card modal-card-root" ref="root">
     <header class="modal-card-head has-background-danger">
-      <p class="modal-card-title has-text-light">You got them all!!</p>
+      <p class="modal-card-title has-text-light">Desafio concluído !!!</p>
       <button class="button is-small is-black" type="button" v-if="isMobile" @click="close">
         <b-icon icon="close" />
       </button>
     </header>
     <section class="modal-card-body">
-      <Pokeball v-if="!isMobile" />
 
       <div class="control canvas-content" ref="content">
-        <img src="img/8bits-coach.png">
-        <h3>Pokémon - Memory Game</h3>
+        <center><img width="100px"  src="img/abstract.png"></center>
+        <h3 style="margin-top: 30px">MicroMemória - O Jogo dos Micróbios</h3>
         <hr />
 
         <div class="tags has-addons are-medium">
           <span class="tag is-black">
             <b-icon icon="bullseye-arrow" />
           </span>
-          <span class="tag is-black">Level</span>
+          <span class="tag is-black">Nível</span>
           <span class="tag is-warning">
             {{ levelCount }}
           </span>
@@ -34,7 +33,7 @@
           <span class="tag is-black">
             <b-icon icon="counter" />
           </span>
-          <span class="tag is-black">Score</span>
+          <span class="tag is-black">Pontuação</span>
           <span class="tag is-link">{{ score | number }}</span>
           <span class="tag is-link">
             <b-icon icon="chart-line-variant" />
@@ -46,21 +45,18 @@
           <span class="tag is-black">
             <b-icon icon="clock" />
           </span>
-          <span class="tag is-black">Time</span>
+          <span class="tag is-black">Tempo</span>
           <span class="tag is-info">{{ timer | secToTimeStr(false) }}</span>
           <span class="tag is-info">
             <b-icon icon="chart-line-variant" />
           </span>
           <span class="tag is-info">{{ timerAvg | number }}</span>
         </div>
-        <div class="only-canvas has-text-link">
-          <center>bit.ly/pokemon-memory</center>
-        </div>
       </div>
     </section>
     <footer class="modal-card-foot">
       <button class="button" type="button" @click="reload">
-        <b-icon icon="reload" /> <span>Restart</span>
+        <b-icon icon="reload" /> <span>Reiniciar</span>
       </button>
       <button class="button" type="button" @click="save">
         <b-icon icon="download" />
@@ -70,7 +66,6 @@
 </template>
 
 <script>
-import Pokeball from './Pokeball.vue'
 import { filter } from 'lodash-es'
 import { mapState, mapGetters, mapActions, mapMutations } from 'vuex'
 import { Toast } from 'buefy/dist/components/toast'
@@ -79,7 +74,6 @@ import download from 'downloadjs'
 
 export default {
   name: 'FinishModal',
-  components: { Pokeball },
   computed: {
     ...mapGetters(['levelCount']),
     ...mapState(['score', 'level', 'timer', 'isEasyMode', 'isRouletteMode', 'isMobile']),
@@ -88,8 +82,8 @@ export default {
     },
     gameMode () {
       return filter([
-        this.isEasyMode ? 'easy' : 'normal',
-        this.isRouletteMode ? 'roulette' : ''
+        this.isEasyMode ? 'facil' : 'normal',
+        this.isRouletteMode ? 'roleta' : ''
       ], val => !!val)
         .join('-')
     },
@@ -129,7 +123,7 @@ export default {
 
       this.setLoading(true)
 
-      const imageName = `pokemon-memory-game-${levelLabel}-${gameMode}-${score}.jpg`
+      const imageName = `microbrio-jogo-da-memoria-${levelLabel}-${gameMode}-${score}.jpg`
 
       try {
         const canvas = await html2canvas(this.$refs.content, {
@@ -144,21 +138,20 @@ export default {
         const data = canvas.toDataURL('image/jpeg', 1.0)
 
         download(data, imageName, 'image/jpeg')
-
-        Toast.open({
-          type: 'is-link',
-          message: 'Use this image to share your result as a pokémon trainer!',
-          duration: 3000
-        })
       } catch (e) {
         console.error(e) // eslint-disable-line
         Toast.open({
           type: 'is-danger',
-          message: 'There was a failure :('
+          message: 'Você fracassou :('
         })
       } finally {
         setTimeout(() => {
           this.setLoading(false)
+          Toast.open({
+            type: 'is-link',
+            message: 'Use esta imagem para compartilhar seu resultado como especialista em micróbios!',
+            duration: 3000
+          })
         }, 500)
       }
     }
@@ -178,7 +171,7 @@ export default {
       hitType: 'event',
       eventCategory: 'game',
       eventAction: `finish-${gameMode}`,
-      eventLabel: `Finish level ${level * 2}`,
+      eventLabel: `Nível final ${level * 2}`,
       eventValue: score,
       metric0: time,
       metric1: isEasyMode ? 1 : 0,

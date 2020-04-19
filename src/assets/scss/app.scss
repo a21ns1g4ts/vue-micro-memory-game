@@ -38,3 +38,29 @@
 .fade-in {
   animation: fadeIn 1s ease-in-out;
 }
+
+
+.info-micro{
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: monospace;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: lighter;
+    font-family: monospace;
+  }
+
+  img {
+    margin-bottom: 15px;
+    border: 5px solid;
+    border-color: #dbdbdb;
+    border-radius: 50%;
+  }
+}
+
+

@@ -14,7 +14,7 @@
 
 <script>
 import { getPattern } from '../../support/color'
-import { pokeDBSprite } from '../../support/utils'
+import { biologia } from '../../support/utils'
 
 export default {
   name: 'ImageFlip',
@@ -30,7 +30,7 @@ export default {
   }),
   computed: {
     src () {
-      return pokeDBSprite(this.identifier)
+      return biologia(this.pokemon.id)
     },
     identifier () {
       const { pokemon } = this

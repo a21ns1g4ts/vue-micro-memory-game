@@ -18,6 +18,10 @@ const pokeDBSprite = key => {
   return `https://images.weserv.nl/?url=img.pokemondb.net/artwork/${key}.jpg`
 }
 
+const biologia = id => {
+  return `img/biologia/${id}.png`
+}
+
 const pokeApiSprite = id => {
   return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
 }
@@ -28,4 +32,4 @@ const makeLevels = (base, length) => Array.from({ length }).map((_, index) => {
   return base * (index + 1)
 })
 
-export { randomIntList, pokeDBSprite, pokeApiSprite, isMobile, makeLevels }
+export { randomIntList, pokeDBSprite, pokeApiSprite, isMobile, makeLevels, biologia }

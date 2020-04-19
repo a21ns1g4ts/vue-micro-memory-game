@@ -2,8 +2,9 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-item mono">
-        <img :src="logo" title="Pokémon" alt="Pokémon" class="logo">
-        <span>{{ gameName }}</span>
+        <img :src="pokemon.id ? logo: 'img/abstract.png'" title="MicroMemória" alt="MicroMemória" class="logo">
+        <span v-if="isMobile">MicroMemória</span>
+        <span v-else>MicroMemória: <br> O Jogo dos Micróbios </span>
       </div>
       <div class="navbar-item">
         <Timer class="is-pulled-right" v-if="isMobile" />
@@ -24,6 +25,7 @@ import { sample } from 'lodash-es'
 import { mapState } from 'vuex'
 import Timer from '../Timer.vue'
 import Visibility from 'visibilityjs'
+import { biologia } from '../../support/utils'
 
 export default {
   name: 'ShellHeader',
@@ -31,16 +33,13 @@ export default {
   data () {
     return {
       ids: [],
-      pokemon: 150
+      pokemon: 14
     }
   },
   computed: {
     ...mapState(['isMobile']),
     logo () {
-      return 'img/abstract.png'
-    },
-    gameName () {
-      return process.env.VUE_APP_NAME
+      return biologia(this.pokemon.id)
     }
   },
   watch: {
@@ -53,7 +52,7 @@ export default {
   },
   methods: {
     loadIds () {
-      return fetch('/logos.json')
+      return fetch('/biologia.json')
         .then(response => response.json())
         .then(ids => {
           this.ids = ids
@@ -82,7 +81,9 @@ export default {
 
 <style>
   .logo {
-    max-height: 3rem !important;
+    max-height: 2.5rem !important;
+    border-radius: 12px;
+    margin-right: 10px;
   }
   .mono {
     font-family: monospace;

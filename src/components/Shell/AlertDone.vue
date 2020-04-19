@@ -4,8 +4,8 @@
     v-if="isDone"
     v-on="$listeners"
     type="is-success">
-    <p>Congratulations, you got them all!</p>
-    <p>Thanks for playing!</p>
+    <p>Parabéns, você conseguiu !</p>
+    <p>Obrigado por jogar !</p>
   </b-notification>
 </template>
 
