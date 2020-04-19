@@ -2,6 +2,7 @@ import * as mutations from './mutations.type'
 import { includes } from 'lodash-es'
 
 const loadPokemon = ({ commit }) => {
+  commit(mutations.setTimer, 0)
   commit(mutations.setIsLoading, true)
   commit(mutations.setIsRunning, false)
   commit(mutations.resetSelecteds)

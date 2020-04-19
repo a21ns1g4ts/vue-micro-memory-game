@@ -13,6 +13,7 @@ export default {
   isLoading: false,
   isMobile: isMobile(),
   found: [],
+  isInitedinitiated: false,
   selecteds: [],
   pokemonRawList: [],
   readingInformations: false

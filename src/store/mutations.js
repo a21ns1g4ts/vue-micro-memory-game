@@ -23,6 +23,11 @@ export default {
   [types.resetFound]: state => {
     state.found = []
   },
+
+  [types.setIsInitedinitiated]: (state, value) => {
+    state.isInitedinitiated = value
+  },
+
   [types.resetSelecteds]: state => {
     state.selecteds = []
   },

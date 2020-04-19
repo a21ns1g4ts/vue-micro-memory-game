@@ -26,7 +26,7 @@ import { Snackbar } from 'buefy/dist/components/snackbar'
 export default {
   name: 'Timer',
   computed: {
-    ...mapState(['isRunning', 'score', 'isMobile', 'timer', 'readingInformations']),
+    ...mapState(['isRunning', 'score', 'isMobile', 'timer', 'readingInformations', 'isInitedinitiated']),
     ...mapGetters(['timerStatus'])
   },
   watch: {
@@ -42,22 +42,35 @@ export default {
   methods: {
     ...mapActions(['loadPokemon']),
     ...mapMutations({
-      setTimer: 'set/timer'
+      setTimer: 'set/timer',
+      setIsInitedinitiated: 'set/isInitedinitiated'
     }),
     startTimer () {
-      Snackbar.open({
-        message: 'Iniciar game',
-        type: 'is-warning',
-        position: 'is-top',
-        actionText: 'Go !',
-        indefinite: true,
-        onAction: () => {
-          this.setTimer(1)
-          this.$interval = Visibility.every(1000, () => {
-            if (!this.readingInformations) { this.setTimer(this.timer + 1) }
-          })
-        }
-      })
+      if (!this.isInitedinitiated) {
+        Snackbar.open({
+          message: 'Iniciar game',
+          type: 'is-warning',
+          position: 'is-top',
+          actionText: 'Go !',
+          indefinite: true,
+          onAction: () => {
+            this.setIsInitedinitiated(true)
+            this.setTimer(1)
+            this.$interval = Visibility.every(1000, () => {
+              if (!this.readingInformations) {
+                this.setTimer(this.timer + 1)
+              }
+            })
+          }
+        })
+      } else {
+        this.setTimer(1)
+        this.$interval = Visibility.every(1000, () => {
+          if (!this.readingInformations) {
+            this.setTimer(this.timer + 1)
+          }
+        })
+      }
     },
     stopTimer () {
       Visibility.stop(this.$interval)

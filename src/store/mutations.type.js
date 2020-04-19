@@ -1,3 +1,4 @@
+export const setIsInitedinitiated = 'set/isInitedinitiated'
 export const setError = 'set/error'
 export const setLevel = 'set/level'
 export const setTimer = 'set/timer'

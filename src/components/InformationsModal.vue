@@ -7,7 +7,7 @@
     </header>
     <section class="modal-card-body">
       <h2 class="title">Modos de Jogo</h2>
-      <p>Mods que mudam a experiência do jogo e a pontuação final.</p>
+      <p>Modos que mudam a experiência do jogo e a pontuação final.</p>
 
       <hr>
 
@@ -30,10 +30,8 @@
         </div>
       </div>
 
-      <hr>
       <h2 class="title">Pontuação</h2>
-      <p>Cada micróbio que você combina adiciona pontos à sua pontuação final. Esses pontos variam de acordo com o nível e o modo de jogo.</p>
-      <p>Cada Pokémon que você pega adiciona pontos à sua pontuação final. Esses pontos variam de acordo com o nível e o modo de jogo.</p>
+      <p style="margin-bottom: 10px">Cada micróbio que você combina adiciona pontos no total. Esses pontos variam de acordo com o nível e o modo de jogo.</p>
       <table class="table is-bordered is-fullwidth">
         <thead>
           <tr>

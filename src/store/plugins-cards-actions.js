@@ -24,6 +24,7 @@ const cardsActionsPlugin = store => {
   const addFound = ({ id, identifier, description, transmission, symptoms }) => {
     cathAlert(identifier)
     store.dispatch('addFound', id)
+    store.commit(mutations.setReadingInformations, true)
     Dialog.confirm({
       title: identifier.toUpperCase(),
       message: `
@@ -37,6 +38,9 @@ const cardsActionsPlugin = store => {
        </div>
       `,
       confirmText: 'Entendi !',
+      onConfirm: function () {
+        store.commit(mutations.setReadingInformations, false)
+      },
       canCancel: false,
       type: 'is-success'
     })
