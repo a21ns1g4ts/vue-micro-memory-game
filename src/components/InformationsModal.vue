@@ -17,21 +17,21 @@
             <b-icon icon="baby-buggy" /> Modo fácil
           </h3>
           <p>Comece a praticar com todas as cartas reveladas.</p>
-          <p>O tempo varia com o nível selecionado.</p>
+          <p>O tempo de exibição das dicas variam com o nível selecionado.</p>
           <p>Jogar nesse nível faz com que você perca 50% da pontuação básica; no modo roleta, esse valor é 75%</p>
         </div>
         <div class="column">
           <h3 class="subtitle">
             <b-icon icon="shuffle-variant" /> Modo Roleta
           </h3>
-          <p>Este modo fornece uma dificuldade extra e, com isso, uma pontuação base muito maior.</p>
-          <p>Depois de vários acertos, tudo é embaralhado novamente.</p>
+          <p>Este modo fornece uma dificuldade extra gerando uma pontuação muito maior que no modo fácil.</p>
+          <p>Depois de vários acertos tudo é embaralhado novamente.</p>
 
         </div>
       </div>
 
       <h2 class="title">Pontuação</h2>
-      <p style="margin-bottom: 10px">Cada micróbio que você combina adiciona pontos no total. Esses pontos variam de acordo com o nível e o modo de jogo.</p>
+      <p style="margin-bottom: 10px">Cada micróbio que você combina adiciona pontos à pontuação total. Esses pontos variam de acordo com o nível e o modo de jogo ativos.</p>
       <table class="table is-bordered is-fullwidth">
         <thead>
           <tr>
@@ -76,6 +76,3 @@ export default {
   }
 }
 </script>
-
-<style lang="css" scoped>
-</style>
