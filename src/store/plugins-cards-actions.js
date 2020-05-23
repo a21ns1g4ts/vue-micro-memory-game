@@ -47,7 +47,7 @@ const cardsActionsPlugin = store => {
   }
 
   store.watch(
-    ({ pokemonRawList, isMobile, shuffleCount }) => ({ pokemonRawList, isMobile, shuffleCount }),
+    ({ microbeRawList, isMobile, shuffleCount }) => ({ microbeRawList, isMobile, shuffleCount }),
     ({ isMobile }) => {
       if (isMobile) {
         setTimeout(() => {

@@ -15,7 +15,7 @@ const randomIntList = (length, max, min = 0) => {
 }
 
 const pokeDBSprite = key => {
-  return `https://images.weserv.nl/?url=img.pokemondb.net/artwork/${key}.jpg`
+  return `https://images.weserv.nl/?url=img.microbedb.net/artwork/${key}.jpg`
 }
 
 const biologia = id => {
@@ -23,7 +23,7 @@ const biologia = id => {
 }
 
 const pokeApiSprite = id => {
-  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`
+  return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/microbe/${id}.png`
 }
 
 const isMobile = () => window.screen.width <= 699

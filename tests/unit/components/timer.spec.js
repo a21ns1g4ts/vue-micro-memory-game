@@ -24,7 +24,7 @@ describe('Timer.vue', () => {
 
   beforeEach(() => {
     actions = {
-      loadPokemon: jest.fn()
+      loadMicrobe: jest.fn()
     }
     mutations = {
       'set/timer': jest.fn((state, val) => {
@@ -82,14 +82,14 @@ describe('Timer.vue', () => {
     expect(state.timer).toBe(8)
   })
 
-  it('call "loadPokemon"', () => {
+  it('call "loadMicrobe"', () => {
     const wrapper = shallowMount(Timer, { store, localVue })
 
     const btn = wrapper.find('a.--btn-reload')
 
     btn.trigger('click')
 
-    expect(actions.loadPokemon).toHaveBeenCalledTimes(1)
+    expect(actions.loadMicrobe).toHaveBeenCalledTimes(1)
   })
 
   it('mobile version', () => {

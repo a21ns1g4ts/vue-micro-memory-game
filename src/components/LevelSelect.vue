@@ -3,7 +3,7 @@
     <slot />
     <a v-if="isMobile"
       class="button is-outlined"
-      @click="loadPokemon">
+      @click="loadMicrobe">
       <b-icon type="is-danger" size="small" icon="reload" />
     </a>
     <a v-for="value in levels"
@@ -26,7 +26,7 @@ export default {
     ...mapGetters(['levels'])
   },
   methods: {
-    ...mapActions(['setLevel', 'loadPokemon']),
+    ...mapActions(['setLevel', 'loadMicrobe']),
     select (level) {
       this.setLevel(level)
 

@@ -3,7 +3,7 @@
     <div class="card-image">
       <CardImage
         @click.native="onClick"
-        v-bind="{ pokemon, placehold, visible, found: isFound }" />
+        v-bind="{ microbe, placehold, visible, found: isFound }" />
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
   props: {
     selecteds: Array,
     findings: Array,
-    pokemon: Object,
+    microbe: Object,
     forceDisplay: Boolean
   },
   computed: {
@@ -28,13 +28,13 @@ export default {
       return this.forceDisplay || this.isSelected || this.isFound
     },
     isSelected () {
-      return includes(this.selecteds, this.pokemon.index)
+      return includes(this.selecteds, this.microbe.index)
     },
     isFound () {
-      return includes(this.findings, this.pokemon.id)
+      return includes(this.findings, this.microbe.id)
     },
     placehold () {
-      const { index } = this.pokemon
+      const { index } = this.microbe
       if (index > 25) {
         const letter = index % 26
         const base = Math.floor(index / 26) - 1
@@ -51,7 +51,7 @@ export default {
   },
   methods: {
     onClick (e) {
-      if (this.timer > 0) { this.$emit('select', this.pokemon) }
+      if (this.timer > 0) { this.$emit('select', this.microbe) }
     }
   }
 }

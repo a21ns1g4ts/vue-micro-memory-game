@@ -105,7 +105,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['loadPokemon']),
+    ...mapActions(['loadMicrobe']),
     ...mapMutations({
       setLoading: 'set/isLoading'
     }),
@@ -113,7 +113,7 @@ export default {
       this.$parent.close()
     },
     reload () {
-      this.loadPokemon()
+      this.loadMicrobe()
       this.$nextTick(() => {
         this.close()
       })

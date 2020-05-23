@@ -3,11 +3,11 @@ import { randomIntList, makeLevels } from '../support/utils'
 import { getColsNumber, getColsMobileNumber } from '../support/grid'
 
 export default {
-  // count all pokemon
-  pokemonRawCount: ({ pokemonRawList }) => size(pokemonRawList),
+  // count all microbe
+  microbeRawCount: ({ microbeRawList }) => size(microbeRawList),
   // number of cards
   levelCount: ({ level }) => level * 2,
-  // number of pokemon found
+  // number of microbe found
   foundCount: ({ found }) => size(found),
   levels: ({ isMobile }) => {
     return makeLevels(7, isMobile ? 2 : 2)
@@ -15,18 +15,18 @@ export default {
   timerStatus: ({ isRunning }, { isDone }) => {
     return isRunning && !isDone
   },
-  // random pokemon pokemon list
-  pokemon: ({ level, pokemonRawList }, { pokemonRawCount }) => {
-    if (pokemonRawCount <= 0) {
+  // random microbe microbe list
+  microbe: ({ level, microbeRawList }, { microbeRawCount }) => {
+    if (microbeRawCount <= 0) {
       return []
     }
 
-    const indexes = randomIntList(level, pokemonRawCount - 1, 0)
-    return map(indexes, index => pokemonRawList[index])
+    const indexes = randomIntList(level, microbeRawCount - 1, 0)
+    return map(indexes, index => microbeRawList[index])
   },
   // list of pokecards
-  pokeCards: ({ shuffleCount }, { pokemon }) => {
-    const list = shuffle([...pokemon, ...pokemon])
+  pokeCards: ({ shuffleCount }, { microbe }) => {
+    const list = shuffle([...microbe, ...microbe])
 
     return map(list, (row, index) => {
       return {
@@ -36,7 +36,7 @@ export default {
       }
     })
   },
-  // lists of pokemon list
+  // lists of microbe list
   pokeCardsLists: ({ isMobile }, { pokeCards }) => {
     const len = size(pokeCards)
     return chunk(
@@ -50,7 +50,7 @@ export default {
       return find(pokeCards, card => card.index === index)
     })
   },
-  // all pokemon has find
+  // all microbe has find
   isDone: ({ level }, { foundCount }) => {
     if (foundCount === 0) {
       return false

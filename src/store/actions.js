@@ -1,7 +1,7 @@
 import * as mutations from './mutations.type'
 import { includes } from 'lodash-es'
 
-const loadPokemon = ({ commit }) => {
+const loadMicrobe = ({ commit }) => {
   commit(mutations.setTimer, 0)
   commit(mutations.setIsLoading, true)
   commit(mutations.setIsRunning, false)
@@ -14,7 +14,7 @@ const loadPokemon = ({ commit }) => {
     .then(response => response.json())
     .then(data => {
       commit(mutations.setError, '')
-      commit(mutations.setPokemonRawList, [...data])
+      commit(mutations.setMicrobeRawList, [...data])
       return new Promise(resolve => {
         setTimeout(() => {
           commit(mutations.setIsRunning, true)
@@ -28,32 +28,32 @@ const loadPokemon = ({ commit }) => {
     })
 }
 
-const selectPokeCard = ({ commit, state }, pokemon) => {
+const selectPokeCard = ({ commit, state }, microbe) => {
   const { found, selecteds } = state
 
-  if (includes(found, pokemon.id) || includes(selecteds, pokemon.index)) {
+  if (includes(found, microbe.id) || includes(selecteds, microbe.index)) {
     return
   }
 
-  commit(mutations.addSelected, pokemon.index)
+  commit(mutations.addSelected, microbe.index)
 }
 
 const setLevel = ({ commit, dispatch }, level) => {
   commit(mutations.setLevel, level)
 
-  return dispatch('loadPokemon')
+  return dispatch('loadMicrobe')
 }
 
 const setIsEasyMode = ({ commit, dispatch }, value) => {
   commit(mutations.setIsEasyMode, value)
 
-  return dispatch('loadPokemon')
+  return dispatch('loadMicrobe')
 }
 
 const setIsRouletteMode = ({ commit, dispatch }, value) => {
   commit(mutations.setIsRouletteMode, value)
 
-  return dispatch('loadPokemon')
+  return dispatch('loadMicrobe')
 }
 
 const addFound = ({ commit, state, getters }, id) => {
@@ -64,4 +64,4 @@ const addFound = ({ commit, state, getters }, id) => {
   commit(mutations.resetFailures)
 }
 
-export default { loadPokemon, selectPokeCard, setLevel, addFound, setIsEasyMode, setIsRouletteMode }
+export default { loadMicrobe, selectPokeCard, setLevel, addFound, setIsEasyMode, setIsRouletteMode }

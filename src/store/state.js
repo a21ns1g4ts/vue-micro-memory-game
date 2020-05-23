@@ -15,6 +15,6 @@ export default {
   found: [],
   isInitedinitiated: false,
   selecteds: [],
-  pokemonRawList: [],
+  microbeRawList: [],
   readingInformations: false
 }

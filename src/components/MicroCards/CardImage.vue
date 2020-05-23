@@ -19,7 +19,7 @@ import { biologia } from '../../support/utils'
 export default {
   name: 'ImageFlip',
   props: {
-    pokemon: Object,
+    microbe: Object,
     visible: Boolean,
     found: Boolean,
     placehold: String
@@ -30,11 +30,11 @@ export default {
   }),
   computed: {
     src () {
-      return biologia(this.pokemon.id)
+      return biologia(this.microbe.id)
     },
     identifier () {
-      const { pokemon } = this
-      return pokemon.identifier || pokemon.id
+      const { microbe } = this
+      return microbe.identifier || microbe.id
     },
     showLabel () {
       return this.visible && (this.error || this.loading)

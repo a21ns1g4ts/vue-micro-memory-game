@@ -3,12 +3,12 @@
     <div class="container is-fluid">
       <ShellHeader />
 
-      <ShellAlertError @close="loadPokemon" />
-      <ShellAlertDone @close="loadPokemon" />
+      <ShellAlertError @close="loadMicrobe" />
+      <ShellAlertDone @close="loadMicrobe" />
 
-      <PokeCards id="main">
+      <MicroCards id="main">
         <LevelSelect />
-      </PokeCards>
+      </MicroCards>
 
       <ShellFooter />
     </div>
@@ -23,13 +23,13 @@ import { Snackbar } from 'buefy/dist/components/snackbar'
 import ShellComponents from './components/Shell'
 
 const LevelSelect = () => import(/* webpackChunkName: "level-select" */ './components/LevelSelect.vue')
-const PokeCards = () => import(/* webpackChunkName: "poke-cards" */ './components/PokeCards/Main.vue')
+const MicroCards = () => import(/* webpackChunkName: "poke-cards" */ './components/MicroCards/Main.vue')
 const FinishModal = () => import(/* webpackChunkName: "finish-modal" */ './components/FinishModal.vue')
 
 export default {
   name: 'AppShell',
   components: {
-    PokeCards,
+    MicroCards,
     LevelSelect,
     ...ShellComponents
   },
@@ -50,10 +50,10 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['loadPokemon'])
+    ...mapActions(['loadMicrobe'])
   },
   mounted () {
-    this.loadPokemon()
+    this.loadMicrobe()
   },
   created () {
     document.addEventListener('sw:update', () => {

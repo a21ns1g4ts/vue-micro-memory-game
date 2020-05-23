@@ -12,7 +12,7 @@
     <span class="tag is-medium mono is-black">
       {{ score | number }}
     </span>
-    <a class="tag is-warning is-medium --btn-reload" title="Reiniciar" @click="loadPokemon" v-if="isRunning && !isMobile">
+    <a class="tag is-warning is-medium --btn-reload" title="Reiniciar" @click="loadMicrobe" v-if="isRunning && !isMobile">
       <b-icon icon="reload" />
     </a>
   </div>
@@ -40,7 +40,7 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['loadPokemon']),
+    ...mapActions(['loadMicrobe']),
     ...mapMutations({
       setTimer: 'set/timer',
       setIsInitedinitiated: 'set/isInitedinitiated'

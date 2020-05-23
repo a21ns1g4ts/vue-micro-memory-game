@@ -2,7 +2,7 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <div class="navbar-item mono">
-        <img :src="pokemon.id ? logo: 'img/abstract.png'" title="MicroMemória" alt="MicroMemória" class="logo">
+        <img :src="microbe.id ? logo: 'img/abstract.png'" title="MicroMemória" alt="MicroMemória" class="logo">
         <span v-if="isMobile">MicroMemória</span>
         <span v-else>MicroMemória: <br> O Jogo dos Micróbios </span>
       </div>
@@ -33,13 +33,13 @@ export default {
   data () {
     return {
       ids: [],
-      pokemon: 14
+      microbe: 14
     }
   },
   computed: {
     ...mapState(['isMobile']),
     logo () {
-      return biologia(this.pokemon.id)
+      return biologia(this.microbe.id)
     }
   },
   watch: {
@@ -59,7 +59,7 @@ export default {
         })
     },
     changeLogo () {
-      this.pokemon = sample(this.ids)
+      this.microbe = sample(this.ids)
     }
   },
   created () {

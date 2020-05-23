@@ -47,7 +47,7 @@
           @select="onSelect"
           v-bind="{ forceDisplay, selecteds }"
           :findings="found"
-          :pokemon="row" />
+          :microbe="row" />
       </div>
     </div>
   </div>
@@ -137,9 +137,9 @@ export default {
         this.startVisible(level / 2)
       })
     },
-    onSelect (pokemon) {
+    onSelect (microbe) {
       if (!this.forceDisplay) {
-        this.selectPokeCard(pokemon)
+        this.selectPokeCard(microbe)
       }
     }
   },
