@@ -1,8 +1,8 @@
-# Pokémon - Memory Game
+# Micro-Memory Game
 
-A simple memory game using pokémon.
+A simple memory game using microbes.
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/a55967e2-feb2-4ae4-bb35-d58e6c0d1321/deploy-status)](https://app.netlify.com/sites/vue-pokemon-memory-game/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ded457be-4a0d-4c00-84cd-8b2447854217/deploy-status)](https://app.netlify.com/sites/micro-memoria/deploys)
 
 ![demo](public/img/demo-cover.png)
 
