@@ -9,7 +9,7 @@
       </p>
       <p>
         Micro adaptations by
-        <a href="https://github.com/Atiladanvi" target="_blank">@Atiladanvi</a>
+        <a href="https://github.com/a21ns1g4ts" target="_blank">@a21ns1g4ts</a>
       </p>
       <p>
         <a href="https://github.com/vinicius73/vue-microbe-memory-game" target="_blank">
